@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --saffron: #FF6B1A;
+    --saffron-light: #FF8C42;
+    --saffron-dark: #D44E0C;
+    --teal: #0B7B83;
+    --teal-light: #14A8B2;
+    --teal-dark: #075C63;
+    --gold: #F5A623;
+    --gold-light: #FBBF5A;
+    --gold-dark: #D4891A;
+    --maroon: #8B1A4A;
+    --navy: #0E1020;
+    --navy-card: #161828;
+    --navy-border: #252840;
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f4ef;
+    color: #1a1a2e;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .dark body {
+    background-color: #0E1020;
+    color: #e8e4f0;
+  }
+
+  .dark {
+    background-color: #0E1020;
+    color: #e8e4f0;
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* India gradient */
+  .india-gradient {
+    background: linear-gradient(135deg, #FF6B1A 0%, #F5A623 50%, #0B7B83 100%);
+  }
+
+  .india-gradient-text {
+    background: linear-gradient(135deg, #FF6B1A, #F5A623, #0B7B83);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .saffron-gradient {
+    background: linear-gradient(135deg, #FF6B1A 0%, #F5A623 100%);
+  }
+
+  .teal-gradient {
+    background: linear-gradient(135deg, #0B7B83 0%, #14A8B2 100%);
+  }
+
+  /* Glass card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 107, 26, 0.12);
+    box-shadow: 0 8px 32px rgba(255, 107, 26, 0.06);
+  }
+
+  .dark .glass-card {
+    background: rgba(22, 24, 40, 0.85);
+    border: 1px solid rgba(255, 107, 26, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Sidebar */
+  .sidebar-bg {
+    background: #ffffff;
+    border-right: 1px solid #f0e8e0;
+  }
+
+  .dark .sidebar-bg {
+    background: #161828;
+    border-right: 1px solid #252840;
+  }
+
+  /* Active nav item */
+  .nav-active {
+    background: linear-gradient(135deg, rgba(255, 107, 26, 0.12), rgba(245, 166, 35, 0.08));
+    border-left: 3px solid #FF6B1A;
+    color: #FF6B1A;
+  }
+
+  .dark .nav-active {
+    background: linear-gradient(135deg, rgba(255, 107, 26, 0.18), rgba(245, 166, 35, 0.1));
+  }
+
+  /* Saffron button */
+  .btn-saffron {
+    background: linear-gradient(135deg, #FF6B1A, #F5A623);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 107, 26, 0.35);
+  }
+
+  .btn-saffron:hover {
+    background: linear-gradient(135deg, #E8521A, #D4891A);
+    box-shadow: 0 6px 20px rgba(255, 107, 26, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .btn-teal {
+    background: linear-gradient(135deg, #0B7B83, #14A8B2);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(11, 123, 131, 0.35);
+  }
+
+  .btn-teal:hover {
+    box-shadow: 0 6px 20px rgba(11, 123, 131, 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Card hover */
+  .card-hover {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(255, 107, 26, 0.1);
+  }
+
+  /* Warm surface */
+  .surface {
+    background: #ffffff;
+    border: 1px solid #f0e8e0;
+  }
+
+  .dark .surface {
+    background: #161828;
+    border: 1px solid #252840;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    background: rgba(255, 107, 26, 0.1);
+    color: #FF6B1A;
+    border: 1px solid rgba(255, 107, 26, 0.2);
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 10px;
+  }
+
+  .dark .tag-pill {
+    background: rgba(255, 107, 26, 0.15);
+    color: #FF8C42;
+    border-color: rgba(255, 107, 26, 0.3);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 107, 26, 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 107, 26, 0.5);
+  }
+
+  /* Rangoli accent border */
+  .rangoli-border {
+    border-image: linear-gradient(135deg, #FF6B1A, #F5A623, #0B7B83, #F5A623, #FF6B1A) 1;
+  }
+
+  /* Animated shimmer */
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, #f0e8e0 25%, #fff8f0 50%, #f0e8e0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+  }
+
+  /* Pulse saffron */
+  @keyframes pulseSaffron {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 26, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(255, 107, 26, 0); }
+  }
+
+  .pulse-saffron {
+    animation: pulseSaffron 2s infinite;
+  }
+}
