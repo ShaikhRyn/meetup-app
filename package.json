@@ -1,0 +1,11 @@
+{
+  "name": "meetup-app-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix meetup-app",
+    "build": "npm run build --prefix meetup-app",
+    "type-check": "npm run type-check --prefix meetup-app",
+    "preview": "npm run preview --prefix meetup-app"
+  }
+}
